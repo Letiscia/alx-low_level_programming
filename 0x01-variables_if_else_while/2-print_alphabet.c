@@ -15,6 +15,8 @@ int main(void)
 	do {
 		putchar(value);
 		value++;
-	} while ("value <= 'z'\n");
+	} while ("value <= 'z'");
+
+	putchar('\n');
 	return (0);
 }
