@@ -1,9 +1,11 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <stdio.h>
-/* more headers goes there */
-
-/* betty style doc for function main goes there */
+/**
+ * main - last digit of the c program
+ *
+ * Return: Always 0
+ */
 int main(void)
 {
 	int n;
@@ -19,3 +21,4 @@ int main(void)
 	else if (last == 0)
 		printf("Last digit of %d is %d and is 0\n", n, last);
 	return (0);
+}
