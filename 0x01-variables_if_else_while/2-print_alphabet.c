@@ -11,6 +11,7 @@
 int main(void)
 {
 	char value = 'a';
+
 	do {
 		putchar(value);
 		value++;
