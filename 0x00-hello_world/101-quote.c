@@ -4,6 +4,7 @@
 /**
  *main - Entry point
  *and that piece of art is useful by dora korpar
+ * Return: Always 0 (success)
  */
 int main(void)
 {
