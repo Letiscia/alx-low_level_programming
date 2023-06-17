@@ -10,12 +10,18 @@
   */
 int main(void)
 {
-        char value = 'a';
-	char value2 = 'A';
+	char caps;
+	char nocaps;
 
-        do {
-                putchar(value);
-                value++;
-        } while ("value <= 'Z'\n");
-        return (0);
+	for (nocaps = 'a'; nocaps <= 'z'; nocaps++)
+	{putchar(nocaps); }
+
+	for (caps = 'A'; caps <= 'Z'; caps++)
+	{
+		putchar(caps);
+	}
+
+	putchar('\n');
+
+	return (0);
 }
