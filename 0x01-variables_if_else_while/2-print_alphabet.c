@@ -5,18 +5,15 @@
   * main - Entry point
   *
   * Description: This function prints out a generated
-  *		random number
+  *             random number
   * Return: Always 0 (Success)
   */
 int main(void)
 {
-	char value = 'a';
+	char alpha;
 
-	do {
-		putchar(value);
-		value++;
-	} while ("value <= 'z'");
-
+	for (alpha = 'a'; alpha <= 'z'; alpha++)
+	{putchar(alpha); }
 	putchar('\n');
 	return (0);
 }
