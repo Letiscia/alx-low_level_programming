@@ -1,5 +1,9 @@
 #include <stdio.h>
-/* program to print number of base 16 in lowercase*/
+/**
+ * main - Program that prints base 16 lowercase
+ *
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {int a = 0;
 char alpha;
