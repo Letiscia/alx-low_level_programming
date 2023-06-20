@@ -17,8 +17,8 @@ int main(void)
 		{
 			if (a > num)
 			{
-				putchar('0' + num);
-				putchar('0' + a);
+				putchar(num + '0');
+				putchar(a + '0');
 				if (num < 8)
 				{
 					putchar(',');
