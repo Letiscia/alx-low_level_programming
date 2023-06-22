@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
-* print_line - uses the character _ to form a line.
-* @n: The number of times _ is printed
+* print_line - prints a straight line
+* @n: The number of times
 * 
 */
 void print_line(int n)
