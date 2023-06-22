@@ -1,24 +1,32 @@
-#include "main.h"
 #include <stdio.h>
+#include "main.h"
 
 /**
-  * print_to_98 - prints all natural numbers
-  * n to 98
-  * @n: print from this number
-*/
-
+ * print_to_98 - prints all natural numbers from n to 98,
+ * @n: print from this number
+ */
 void print_to_98(int n)
 {
-	if (n < 98)
+	int a;
+	int b;
+
+	if (n <= 98)
 	{
-	for (n = n; n < 98; n++)
-		printf("%d, ", n);
-	printf("%d\n", 98);
-	}
-	else
+		for (a = n; a <= 98; a++)
+		{
+			if (a != 98)
+				printf("%d, ", a);
+			else if (a == 98)
+				printf("%d\n", a);
+		}
+	} else if (n >= 98)
 	{
-	for (n = n; n > 98; n--)
-	printf("%d, ", n);
-	printf("%d\n", 98);
+		for (b = n; b >= 98; b--)
+		{
+			if (b != 98)
+				printf("%d, ", b);
+			else if (b == 98)
+				printf("%d\n", b);
+		}
 	}
 }
