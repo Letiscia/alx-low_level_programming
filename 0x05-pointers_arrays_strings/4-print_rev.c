@@ -1,4 +1,3 @@
-#include "main.h"
 #include <stdio.h>
 
 /**
@@ -10,9 +9,12 @@
 void print_rev(char *s)
 {
 	char *str;
-
+	int i,n;
 	str = "I do not fear computers. I fear the lack of them - Isaac Asimov";
-	printf("%s", strrev(str));
+	
+	for (i = n - 1; i >= 0; i--) 
+	{
+		printf("%c", str[i]);
 
 	return (0);
 }
