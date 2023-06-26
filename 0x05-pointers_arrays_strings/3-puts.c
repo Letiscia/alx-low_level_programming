@@ -1,18 +1,16 @@
+#include <string.h>
 #include "main.h"
-#include <stdio.h>
-
 /**
- * _puts - prints out a string.
+ * _puts - to print a string.
  * @str: string
- *
- * Return: Always 0.
  */
-_puts(char *str)
+void _puts(char *str)
 {
-		char *str;
+	int i;
 
-	str = "I do not fear computers. I fear the lack of them - Isaac Asimov";
-	_puts(str);
-
-	return (0);
+	for (i = 0; i < strlen(str); i++)
+	{
+		_putchar(str[i]);
+	}
+	_putchar('\n');
 }
