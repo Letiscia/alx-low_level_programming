@@ -1,3 +1,5 @@
+#include <string.h>
+
 /**
  * _strlen - string length
  * @s: string character
