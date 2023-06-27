@@ -1,16 +1,23 @@
-#include "main.h"
+#include <stdio.h>
 #include <string.h>
-/**
- * puts2 - print character of a string
- * @s: string
- */
-void puts2(char *s)
-{
-	unsigned int a;
+#include "main.h"
 
-	for (a = 0; a < strlen(s); a = a + 2)
+/**
+* puts2 - prints every other character of a string
+* @str: string
+*
+**/
+void puts2(char *str)
+{
+	int index;
+	int length;
+
+	length = strlen(str);
+
+	for (index = 0; index < length; index++)
 	{
-		_putchar(s[a]);
+		if (index % 2 == 0)
+			_putchar(str[index]);
 	}
 	_putchar('\n');
 }
