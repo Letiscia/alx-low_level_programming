@@ -4,17 +4,16 @@
  * print_rev - print in reverse
  * @s: string
  *
- * Return: Always 0.
+ * Return
  */
 void print_rev(char *s)
 {
 	char *str;
-	int i,n;
-	str = "I do not fear computers. I fear the lack of them - Isaac Asimov";
-	
-	for (i = n - 1; i >= 0; i--) 
-	{
-		printf("%c", str[i]);
+	int i;
 
-	return (0);
+	for (i = strlen(str); i >= 0; i--)
+	{
+		_putchar("%s", str[i]);
+	}
+	_putchar('\n');
 }
