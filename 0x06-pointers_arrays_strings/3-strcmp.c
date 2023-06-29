@@ -1,22 +1,18 @@
 #include "main.h"
 
 /**
- * _puts - prints a string
- * @str: string.
- * Return: 0
- */
-void _puts(char *str)
+* _strcmp - compares two strings
+* @s1: string
+* @s2: string
+* Return: an integer less than, equal to, or greater than zero
+*/
+int _strcmp(char *s1, char *s2)
 {
-	int count = 0;
+	int i = 0;
 
-	while (count >= 0)
-	{
-		if (str[count] == '\0')
-		{
-			_putchar('\n');
-			break;
-		}
-		_putchar(str[count]);
-		count++;
-	}
+	while (s1[i] != '\0' && s2[i] != '\0' && s1[i] == s2[i])
+	i++;
+
+	return (s1[i] - s2[i]);
 }
+
