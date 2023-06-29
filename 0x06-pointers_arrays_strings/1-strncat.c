@@ -1,46 +1,27 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
- *_atoi - convert string to number
+ * _strncat - a function that concatenates two strings.
  *
- * @s: string reference
- * Return: conversion
+ * @dest: destination
+ * @src: pointer to source input
+ * @n: number of bytes
+ * Return: @dest
  */
-
-int _atoi(char *s)
+char *_strncat(char *dest, char *src, int n)
 {
-	int i, d, n, len, f, digit;
+	int c, i;
 
-	i = 0;
-	d = 0;
-	n = 0;
-	len = 0;
-	f = 0;
-	digit = 0;
+	c = 0;
 
-	while (s[len] != '\0')
-		len++;
+	while (dest[c])
+		c++;
 
-	while (i < len && f == 0)
-	{
-		if (s[i] == '-')
-			++d;
+	for (i = 0; i < n && src[i] != '\0'; i++)
+		dest[c + i] = src[i];
+	/*null terminate dest*/
+	dest[c + i] = '\0';
 
-		if (s[i] >= '0' && s[i] <= '9')
-		{
-			digit = s[i] - '0';
-			if (d % 2)
-				digit = -digit;
-			n = n * 10 + digit;
-			f = 1;
-			if (s[i + 1] < '0' || s[i + 1] > '9')
-				break;
-			f = 0;
-		}
-		i++;
-	}
-	if (f == 0)
-		return (0);
-
-	return (n);
+	return (dest);
 }
