@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - print ot magic numbers
+ * main - print magic numbers
  *
  * Return: 0
  */
