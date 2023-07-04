@@ -1,23 +1,27 @@
-#include <stdio.h>
-#include "main.h"
-
 /**
- * @_strchr: string character
- * @*s: pointer
- * @c: character
+ * _strstr - a function that locates a substring
  *
- * Return - pointer
+ * @haystack: input string to search for matching substrings
+ * @needle: subtring
+ *
+ * Return: pointer
  */
-
-char *_strchr(char *s, char c)
+char *_strstr(char *haystack, char *needle)
 {
-	while (*s != '\0')
+	char *h, *n;
+
+	while (*haystack != '\0')
 	{
-		if (*s == c)
+		h = haystack;
+		n = needle;
+		while (*n != '\0' && *haystack == *n)
 		{
-			return (s);
+			haystack++;
+			n++;
 		}
-		s++;
+		if (!*n)
+			return (h);
+		haystack++;
 	}
 	return ('\0');
 }
