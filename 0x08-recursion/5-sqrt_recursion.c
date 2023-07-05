@@ -1,39 +1,31 @@
 #include "main.h"
+/**
+ * square - Finds the square root of two numbers
+ * @a: The number
+ * @b: The number to test for the square root of @a
+ * Return: square root
+ */
+int square(int i, int j)
+{
+		if (j * j > i)
+			return (-1);
 
+		else if (j * j == i)
+			return (j);
+
+		else
+			return (square(i, j + 1));
+
+		return (1);
+}
 /**
  * _sqrt_recursion - returns the natural square root of a number
- * @n: number to calculate the square root of
- *
- * Return: the resulting square root
+ * @n: the number to return the square root of
+ * Return: the square root of @n
  */
-
 int _sqrt_recursion(int n)
 {
-	if (n < 0)
-
-		return (-1);
-
-	return (actual_sqrt_recursion(n, 0));
+		if (n == 0)
+			return (0);
+		return (square(n, 1));
 }
-
-/**
- * actual_sqrt_recursion - recurses to find the natural
- * square root of a number
- * @n: number to calculate the sqaure root of
- * @i: iterator
- *
- * Return: the resulting square root
- */
-int actual_sqrt_recursion(int n, int i)
-{
-	if (i * i > n)
-
-		return (-1);
-
-	if (i * i == n)
-
-		return (i);
-
-	return (actual_sqrt_recursion(n, i + 1));
-}
-
