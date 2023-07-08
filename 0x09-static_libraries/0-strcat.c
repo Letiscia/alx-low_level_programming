@@ -1,19 +1,12 @@
-#include "main.h"
 #include <string.h>
-
 /**
- * _puts - prints character.
- * @str: string.
+ * _strcat - string concatenation
+ * @dest: destination
+ * @src: source
  *
+ * Return: concatenated string
  */
-
-void _puts(char *str)
+char *_strcat(char *dest, char *src)
 {
-	unsigned int a;
-
-	for (a = 0; a < strlen(str); a++)
-	{
-		_putchar(str[a]);
-	}
-	_putchar('\n');
+	return (strcat(dest, src));
 }
