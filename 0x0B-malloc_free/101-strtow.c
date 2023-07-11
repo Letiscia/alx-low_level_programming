@@ -9,10 +9,10 @@
  */
 int count_word(char *s)
 {
-	int flag, c, a;
+	int flag, c, w;
 
 	flag = 0;
-	a = 0;
+	w = 0;
 
 	for (c = 0; s[c] != '\0'; c++)
 	{
@@ -21,7 +21,7 @@ int count_word(char *s)
 		else if (flag == 0)
 		{
 			flag = 1;
-			a++;
+			w++;
 		}
 	}
 
@@ -29,9 +29,10 @@ int count_word(char *s)
 }
 /**
  * strtow - splits a string into words
- * @str: string
+ * @str: string to split
  *
- * Return: pointer to an array of strings
+ * Return: pointer to an array of strings (Success)
+ * or NULL (Error)
  */
 char **strtow(char *str)
 {
