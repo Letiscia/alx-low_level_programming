@@ -1,5 +1,3 @@
-#include <stdlib.h>
-#include <stdio.h>
 #include "lists.h"
 
 /**
@@ -13,7 +11,7 @@ size_t list_len(const list_t *h)
 {
 	size_t mylist = 0;
 
-	if (h != NULL)
+	while (h != NULL)
 	{
 		h = h->next;
 		mylist++;
