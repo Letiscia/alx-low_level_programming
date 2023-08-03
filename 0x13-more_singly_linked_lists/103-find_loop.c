@@ -4,7 +4,7 @@
  * find_listint_loop - finds the loop in a linked list
  * @head: head of linked list.
  *
- * Return: address of the node where the loop starts, or NULL if no loop
+ * Return: address of the node where the loop starts, or NULL if no loo:
  */
 
 listint_t *find_listint_loop(listint_t *head)
@@ -12,23 +12,29 @@ listint_t *find_listint_loop(listint_t *head)
 	listint_t *i = head;
 	listint_t *j = head;
 
-	if (!head)
-		return (NULL);
-
-	while (i && j && j->next)
+	while (head && j && j->next)
 	{
+		head = head->next;
 		j = j->next->next;
-		i = i->next;
 
-		if (j == i)
+		if (head == j)
 		{
-			i = head;
-			while (i != j)
+			head = i;
+			i =  j;
+			while (1)
 			{
-				i = i->next;
-				j = j->next;
+
+				j = i;
+				while (j->next != head && j->next != i)
+				{
+					j = j->next;
+				}
+				if (j->next == head)
+					break;
+
+				head = head->next;
 			}
-			return (j);
+			return (j->next);
 		}
 	}
 	return (NULL);
