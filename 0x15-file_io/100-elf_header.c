@@ -1,5 +1,8 @@
 #include <elf.h>
-#include <main.h>
+#include <fcntl.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
 
 void check_elf(unsigned char *e_ident);
 void print_magic(unsigned char *e_ident);
@@ -286,9 +289,9 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	printf("ELF Header:\n");
 	print_magic(header->e_ident);
 	print_class(header->e_ident);
-	print_data(header->e_ident);
+	elf_data(header->buffer);
 	print_version(header->e_ident);
-	print_osabi(header->e_ident);
+	elf_osabi(header->buffer);
 	print_abi(header->e_ident);
 	print_type(header->e_type, header->e_ident);
 	print_entry(header->e_entry, header->e_ident);
